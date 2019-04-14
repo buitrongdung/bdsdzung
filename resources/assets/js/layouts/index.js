@@ -11,6 +11,7 @@ class Layout extends Component
 {
     static displayName = 'Layout';
     static propTypes = {
+        isAdmin: PropTypes.number.isRequired,
         isAuthenticated: PropTypes.bool.isRequired,
         children: PropTypes.node.isRequired,
         dispatch: PropTypes.func.isRequired,
@@ -29,6 +30,7 @@ class Layout extends Component
 
 const mapStateToProps = state => {
     return {
+        isAdmin: state.auth.isAdmin,
         isAuthenticated: state.auth.isAuthenticated,
         user: state.user
     }

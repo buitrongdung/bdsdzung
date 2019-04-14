@@ -12,7 +12,7 @@ import { render } from 'react-dom'
 import { Provider } from 'react-redux'
 import store from './store/index'
 import Routes from './routes/index'
-import { authCheck } from './modules/auth/store/actions'
+import { authCheck } from './modules/frontend/auth/store/actions'
 
 store.dispatch(authCheck());
 const jsx = (

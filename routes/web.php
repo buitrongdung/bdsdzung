@@ -10,6 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/admin/login', 'Admin\AdminController@login')->name('admin.login');
 
 Route::get('/{any}', function () {
     return view('index');

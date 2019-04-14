@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
 import TopMenu from './components/TopMenu'
-import {logout} from '../../modules/auth/service';
+import {logout} from '../../modules/frontend/auth/service';
 
 class Header extends Component
 {

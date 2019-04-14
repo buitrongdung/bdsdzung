@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 import axios from 'axios'
 import store from '../store'
-import { authLogout } from '../modules/auth/store/actions'
+import { authLogout } from '../modules/frontend/auth/store/actions'
 
 
 const version = 'v1'

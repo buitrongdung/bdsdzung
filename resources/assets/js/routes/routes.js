@@ -1,6 +1,9 @@
-import usersRoute from '../modules/users/routes'
-import auth from '../modules/auth/routes'
-import homePage from '../modules/home/routes'
-import contact from '../modules/contact/routes'
+import usersRoute from '../modules/frontend/users/routes'
+import auth from '../modules/frontend/auth/routes'
+import homePage from '../modules/frontend/home/routes'
+import contact from '../modules/frontend/contact/routes'
 
-export default [...auth,...usersRoute,...homePage, ...contact]
+//admin
+import authAdmin from '../modules/admin/auth/routes'
+
+export default [...auth,...usersRoute,...homePage, ...contact, ...authAdmin]
