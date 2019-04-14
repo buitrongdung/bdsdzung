@@ -1953,18 +1953,10 @@ h6 {
   padding-right: 0;
 }
 
-text-transform:uppercase .menutop-wrap .menu-top .list li:hover {
-  cursor: pointer;
-}
-
-text-transform:uppercase .menutop-wrap .menu-top .list li:hover a {
-  color: #fff;
-}
-
 .menutop-wrap .menu-top .list li a {
+  text-transform: uppercase;
   font-weight: 600;
   color: #222;
-  text-transform: uppercase;
 }
 
 @media (max-width: 462px) {
@@ -1972,6 +1964,31 @@ text-transform:uppercase .menutop-wrap .menu-top .list li:hover a {
     font-size: 8px;
     padding: 5px 0px;
   }
+}
+
+.menutop-wrap .menu-top .list li a.genric-btn {
+  font-size: 14px;
+  color: #fff;
+}
+
+.menutop-wrap .menu-top .list li a.genric-btn i,
+.menutop-wrap .menu-top .list li a.genric-btn a {
+  color: #fff;
+}
+
+.menutop-wrap .menu-top .list li a.genric-btn:hover {
+  color: #ea6c5d;
+}
+
+.menutop-wrap .dropdown .dropdown-menu a {
+  text-transform: none;
+  font-weight: 300 !important;
+  font-size: 12px;
+  padding: 5px 10px;
+}
+
+.menutop-wrap .dropdown .dropdown-menu a:hover {
+  color: #ea6c5d;
 }
 
 @media (max-width: 992px) {
@@ -2039,14 +2056,6 @@ text-transform:uppercase .menutop-wrap .menu-top .list li:hover a {
   display: inline-block;
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
-}
-
-.menu-top li:hover {
-  background-color: #ea6c5d;
-}
-
-.menu-top li:hover a {
-  color: #fff !important;
 }
 
 /*--------------------------------------------------------------
@@ -2131,10 +2140,6 @@ text-transform:uppercase .menutop-wrap .menu-top .list li:hover a {
   font-size: 12px;
   text-transform: uppercase;
   outline: none;
-}
-
-.nav-menu:last-child a {
-  padding-right: 15px;
 }
 
 .nav-menu li:hover > a,

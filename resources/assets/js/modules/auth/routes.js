@@ -5,7 +5,7 @@ import LoadingComponent from '../../common/loader/index'
 
 export default [
     {
-        path: '/login',
+        path: '/dang-nhap',
         exact: true,
         component: Loadable({
             loader: () => import('./pages/login/index'),
@@ -14,7 +14,7 @@ export default [
         }),
     },
     {
-        path: '/register',
+        path: '/dang-ky',
         exact: true,
         component: Loadable({
             loader: () => import('./pages/register/index'),

@@ -5,10 +5,9 @@ import _ from 'lodash'
 import { withRouter, Redirect } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 
-
-
 import Form from './components/Form'
 import { register } from "../../service";
+import {connect} from "react-redux";
 
 class Register extends Component
 {
@@ -83,17 +82,17 @@ class Register extends Component
     {
         this.props.dispatch(register(frmRegister))
         .catch(({ error, statusCode }) => {
-                const { errors } = this.validator;
+            const { errors } = this.validator;
 
-                if (statusCode === 422) {
-                    _.forOwn(error, (message, field) => {
-                        errors.add(field, message);
-                    });
-                } else if (statusCode === 401) {
-                    errors.add('password', error);
-                }
+            if (statusCode === 422) {
+                _.forOwn(error, (message, field) => {
+                    errors.add(field, message);
+                });
+            } else if (statusCode === 401) {
+                errors.add('password', error);
+            }
 
-                this.setState({ errors });
+            this.setState({ errors });
         })
     }
 
@@ -132,7 +131,10 @@ class Register extends Component
         )
     }
 
-
 }
-
-export default withRouter(Register)
+const mapStateToProps = (state) => {
+    return {
+        authentication: state.authentication
+    };
+};
+export default connect(mapStateToProps)(withRouter(Register));

@@ -5,7 +5,7 @@ import LoadingComponent from '../../common/loader/index'
 
 export default [
     {
-        path: '/contact',
+        path: '/lien-he',
         exact: true,
         component: Loadable({
             loader: () => import('./pages/index'),

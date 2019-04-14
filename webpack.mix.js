@@ -33,6 +33,6 @@ if (mix.inProduction()) {
 } else {
     mix.sourceMaps()
     mix.browserSync({
-        proxy: 'http://www.hellodoctor.local'
+        proxy: 'http://bds.dzung.local'
     })
 }

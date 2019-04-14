@@ -17,7 +17,7 @@ class LoginController extends Controller
 
             $http = new \GuzzleHttp\Client;
 
-            $response = $http->post('http://www.hellodoctor.local/oauth/token', [
+            $response = $http->post('http://bdsdzung.local/oauth/token', [
                 'form_params' => [
                     'grant_type' => 'password',
                     'client_id' => env('PASSWORD_CLIENT_ID'),

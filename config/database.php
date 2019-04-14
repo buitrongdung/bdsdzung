@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'mysql'),
+    'default' => env('DB_CONNECTION'),
 
     /*
     |--------------------------------------------------------------------------
@@ -44,9 +44,9 @@ return [
             'host' => env('DB_HOST', '192.168.10.10'),
             'port' => env('DB_PORT', '33060'),
             'database' => env('DB_DATABASE', 'bdsdzung'),
-            'username' => env('DB_USERNAME', 'homestead'),
+            'username' => env('DB_USERNAME','homestead'),
             'password' => env('DB_PASSWORD', 'secret'),
-            'unix_socket' => env('DB_SOCKET', ''),
+//            'unix_socket' => env('DB_SOCKET', '/var/run/mysqld/mysqld.sock'),
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
             'prefix' => '',
@@ -109,9 +109,9 @@ return [
         'client' => 'predis',
 
         'default' => [
-            'host' => env('REDIS_HOST', '127.0.0.1'),
-            'password' => env('REDIS_PASSWORD', null),
-            'port' => env('REDIS_PORT', 6379),
+            'host' => env('REDIS_HOST'),
+            'password' => env('REDIS_PASSWORD'),
+            'port' => env('REDIS_PORT'),
             'database' => 0,
         ],
 
